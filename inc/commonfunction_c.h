@@ -14,7 +14,7 @@
 #include <string>
 #include <regex.h>
 #include <assert.h>
-#include <common.h>
+//#include <common.h>
 
 using namespace std;
 #ifndef INT_MAKE_PATCH_SERIALNO
@@ -29,8 +29,8 @@ public:
     enum eFindPathMode{FPM_ALL=0007,FPM_SYSENV=0001,FPM_PATHWORK=0002,FPM_PATHSTR=0004};
     BaseFunctions(){m_FileName = ""; m_FilePath = "";}
     BaseFunctions(string fileName, string filePath=""):m_FileName(fileName),m_FilePath(filePath){}
-    ~BaseFunctions(){}
     static int GetWorkPath(char *dest); //get program run time path info!
+    ~BaseFunctions(){}
     /*
     static const char* getConfigPath(int mode=FPM_ALL); //mode : FPM_ALL,exec in the following order: SYSENV,PATHSTR,PATHWORK
     static string GetParaByName(string fileName, string name);//work for new type ini,ex: "password=123456";
@@ -68,10 +68,10 @@ public:
     //根据参数计算出软件版权期限
     static int getLicenseLimitDay(int dayBegin, int dayNum);
 
-
+*/
 private:
     string m_FileName,m_FilePath;
-
+/*
     static char *getSysEnvConfigPath(char *dest); //get system env for path , if not found env or path , rutern NULL;
     static int freadLine(void *buffer, int size, FILE *f);
     static int strcmp_nonsafe(const char *c1, const char *c2); // result 0  : c1 == c2 , 1 : c2 include c1 , -1 : c2 not include c1

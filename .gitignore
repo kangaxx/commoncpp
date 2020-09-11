@@ -28,8 +28,16 @@
 
 # vim temp file
 *.swp
+*.swo
 
 # Executables
 *.exe
 *.out
 *.app
+
+# cmake file
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+Makefile
